@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web AI Spotify DJ</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+    <div style="text-align: center; padding: 20px;">
+        <h1 style="color: #333;">Web AI Spotify DJ</h1>
+        <div>
+            <input type="text" id="myUserInput" placeholder="Type your command here..." 
+                style="width: 80%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="button" value="Send" onclick="myHandleInput()" 
+                style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        </div>
+        <div id="myResponse" style="margin-top: 20px; color: #555;"></div>
+    </div>
+
+    <script>
+        // Spotify-related functions (from spotifyLib.js)
+        async function mySpotifyAuth() {
+            // Simulated Spotify authentication for this SPA
+            console.log('Authenticating with Spotify...');
+        }
+
+        async function mySpotifySearch(query) {
+            console.log('Searching Spotify for:', query);
+            return `Results for "${query}"`;
+        }
+
+        // AI interaction (from script.js)
+        async function myHandleInput() {
+            const myUserInput = document.getElementById('myUserInput').value;
+            if (!myUserInput) {
+                document.getElementById('myResponse').innerText = 'Please enter a command.';
+                return;
+            }
+
+            document.getElementById('myResponse').innerText = 'Processing...';
+            await mySpotifyAuth(); // Simulate authentication
+
+            const myAIResponse = await myProcessAICommand(myUserInput);
+            document.getElementById('myResponse').innerText = myAIResponse;
+        }
+
+        async function myProcessAICommand(command) {
+            if (command.toLowerCase().includes('play')) {
+                return await mySpotifySearch(command);
+            }
+            return `I don't understand the command: "${command}"`;
+        }
+    </script>
+</body>
+</html>
