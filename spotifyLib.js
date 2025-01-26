@@ -5,7 +5,11 @@
  ******************************************************************/
 
 let spotifyAPIHelper = function() {
-  const REDIRECT_URI = "https://spotify-web-ai-agent-dj.glitch.me/index.html"; // YOU NEED TO UPDATE THIS TO BE YOUR DOMAIN AND AUTH WITH YOUR OWN CREDENTIALS BELOW.
+ // const REDIRECT_URI = "https://spotify-web-ai-agent-dj.glitch.me/index.html"; // YOU NEED TO UPDATE THIS TO BE YOUR DOMAIN AND AUTH WITH YOUR OWN CREDENTIALS BELOW.
+  const REDIRECT_URI = "https://hpssjellis.github.io/Web-AI-Spotify-DJ/spa03.html"; // YOU NEED TO UPDATE THIS TO BE YOUR DOMAIN AND AUTH WITH YOUR OWN CREDENTIALS BELOW.
+
+
+  //   https://hpssjellis.github.io/Web-AI-Spotify-DJ/spa03.html
 
   const AUTHORIZE = "https://accounts.spotify.com/authorize"
   const TOKEN = "https://accounts.spotify.com/api/token";
