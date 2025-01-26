@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="file" id="fileInput" accept=".bin">
+    <input type="button" value="Load Model" onclick="myLoadModel()">
+
+    <script>
+      async function myLoadModel() {
+        try {
+          // Attempt to fetch the model from the same directory
+          const response = await fetch('gemma2-2b-it-gpu-int8.bin');
+          const modelBuffer = await response.arrayBuffer();
+          console.log('Model loaded via fetch:', modelBuffer);
+        } catch (error) {
+          console.log('Fetch failed, prompting user to select file...');
+          // Fallback: Load file via input picker
+          const fileInput = document.getElementById('fileInput');
+          const file = fileInput.files[0];
+          if (file) {
+            const modelBuffer = await file.arrayBuffer();
+            console.log('Model loaded via file picker:', modelBuffer);
+          } else {
+            console.log('No file selected.');
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
