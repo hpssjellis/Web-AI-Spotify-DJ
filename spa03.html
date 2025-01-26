@@ -344,8 +344,8 @@ function playArtist(artistName) {
  * Web AI Gemma 2 LLM code.
  **************************************************************/
 const modelFileNameRemote = 'https://storage.googleapis.com/jmstore/WebAIDemos/models/Gemma2/gemma2-2b-it-gpu-int8.bin';
-//const modelFileName = 'http://localhost/gemma2-2b-it-gpu-int8.bin';  should be a dowmload file name but CORS may have issues with that
-const modelFileName = 'file:///C:/Users/keyfr/Downloads/gemma2-2b-it-gpu-int8.bin';
+const modelFileName = 'http://localhost/gemma2-2b-it-gpu-int8.bin';  should be a dowmload file name but CORS may have issues with that
+//const modelFileName = 'file:///C:/Users/keyfr/Downloads/gemma2-2b-it-gpu-int8.bin';
 
 
 const CHAT_PERSONA_NAME = 'chatPersona';
@@ -356,7 +356,8 @@ let lastGeneratedResponse = '';
 let activePersona = '';
 
 async function initLLM(modelUrl) {
-  let dataUrl = await fetchFile(modelFileName, modelFileNameRemote);
+ // let dataUrl = await fetchFile(modelFileName, modelFileNameRemote);
+  let dataUrl = await fetchFile(modelFileNameRemote);                  ////////////////////// deactivating localhost
   const genaiFileset = await FilesetResolver.forGenAiTasks(
       'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-genai/wasm');
   
