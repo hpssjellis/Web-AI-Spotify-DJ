@@ -6,7 +6,13 @@ Trying to make an SPA (Single page Javascript Application) of this code. Jan 25t
 By Jeremy Ellis. Careful with the original download it is very big >2.4 GB I think.
 
 
-Try the demo at https://hpssjellis.github.io/Web-AI-Spotify-DJ/spa01.html
+Try the demo at https://hpssjellis.github.io/Web-AI-Spotify-DJ/spa00.html    most stable
+
+Try the demo at https://hpssjellis.github.io/Web-AI-Spotify-DJ/spa02.html
+
+Try the demo at https://hpssjellis.github.io/Web-AI-Spotify-DJ/spa03.html
+
+Try the demo at https://hpssjellis.github.io/Web-AI-Spotify-DJ/spa04.html
 
 # Spotify Web AI DJ - create the perfect mix of music using a natural voice interface, powered by Google's Gemma 2 model on device, to act as an agent capable of using the Spotify API
 
