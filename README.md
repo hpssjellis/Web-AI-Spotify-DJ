@@ -1,6 +1,13 @@
 .
 
 
+node loading locahost in downloads in a public folder
+
+```npm install -g http-server```
+
+
+```http-server C:\Users\[ME]\Downloads\public -p 8000 --cors```
+
 Trying to make an SPA (Single page Javascript Application) of this code. Jan 25th, 2025
 
 By Jeremy Ellis. Careful with the original download it is very big >2.4 GB I think.
