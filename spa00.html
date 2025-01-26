@@ -1,10 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web AI Spotify DJ</title>
+    <script src="spotifyLib.js"></script>
+    <script src="fetchInChunks.js"></script>
+    <script src="md5.js"></script>
 </head>
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
     <div style="text-align: center; padding: 20px;">
@@ -19,9 +21,7 @@
     </div>
 
     <script>
-        // Spotify-related functions (from spotifyLib.js)
         async function mySpotifyAuth() {
-            // Simulated Spotify authentication for this SPA
             console.log('Authenticating with Spotify...');
         }
 
@@ -30,7 +30,6 @@
             return `Results for "${query}"`;
         }
 
-        // AI interaction (from script.js)
         async function myHandleInput() {
             const myUserInput = document.getElementById('myUserInput').value;
             if (!myUserInput) {
@@ -39,7 +38,7 @@
             }
 
             document.getElementById('myResponse').innerText = 'Processing...';
-            await mySpotifyAuth(); // Simulate authentication
+            await mySpotifyAuth();
 
             const myAIResponse = await myProcessAICommand(myUserInput);
             document.getElementById('myResponse').innerText = myAIResponse;
