@@ -833,8 +833,13 @@ function playArtist(artistName) {
  * Web AI Gemma 2 LLM code.
  **************************************************************/
 const modelFileNameRemote = 'https://storage.googleapis.com/jmstore/WebAIDemos/models/Gemma2/gemma2-2b-it-gpu-int8.bin';
-let modelFileName = 'http://localhost/gemma2-2b-it-gpu-int8.bin'; // should be a dowmload file name but CORS may have issues with that
+//let modelFileName = 'http://localhost/gemma2-2b-it-gpu-int8.bin'; // should be a dowmload file name but CORS may have issues with that
 //const modelFileName = 'file:///C:/Users/keyfr/Downloads/gemma2-2b-it-gpu-int8.bin';
+      
+let modelFileName = 'http://127.0.0.1:8000/gemma2-2b-it-gpu-int8.bin'; // should be a dowmload file name but CORS may have issues with that
+
+
+      //http://127.0.0.1:8000
 
 
 const CHAT_PERSONA_NAME = 'chatPersona';
